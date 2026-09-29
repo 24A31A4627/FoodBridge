@@ -1,0 +1,56 @@
+.auth-page {
+  min-height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+  padding: 32px 16px;
+  background: radial-gradient(ellipse 80% 60% at 20% 20%, #0d2e1280 0%, transparent 60%),
+              radial-gradient(ellipse 60% 50% at 80% 80%, #1a3a1280 0%, transparent 60%),
+              var(--bg);
+}
+.auth-card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 16px; padding: 40px;
+  width: 100%; max-width: 420px;
+  box-shadow: var(--shadow);
+}
+.auth-card-wide { max-width: 680px; }
+.auth-logo {
+  font-family: var(--font-head); font-size: 1.4rem; font-weight: 800;
+  color: var(--green); margin-bottom: 20px; text-align: center;
+}
+.auth-title {
+  font-family: var(--font-head); font-size: 1.6rem; font-weight: 800;
+  text-align: center; margin-bottom: 6px;
+}
+.auth-sub { color: var(--muted); font-size: 14px; text-align: center; margin-bottom: 28px; }
+.auth-footer { text-align: center; font-size: 13px; color: var(--muted); margin-top: 20px; }
+
+/* Role selector */
+.role-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.role-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 10px; padding: 12px;
+  cursor: pointer; transition: all .2s; text-align: center;
+}
+.role-card:hover { border-color: var(--green-dim); }
+.role-card.selected { border-color: var(--green); background: #0d2210; }
+.role-label { font-size: 13px; font-weight: 600; margin-bottom: 4px; }
+.role-desc  { font-size: 11px; color: var(--muted); line-height: 1.4; }
+
+/* Demo chips */
+.auth-demo {
+  margin-top: 20px; padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+.demo-title { font-size: 11px; color: var(--muted); text-align: center; margin-bottom: 8px; text-transform: uppercase; letter-spacing: .06em; }
+.demo-chips { display: flex; gap: 8px; justify-content: center; }
+.demo-chip {
+  background: var(--surface); border: 1px solid var(--border);
+  padding: 4px 14px; border-radius: 99px;
+  font-size: 12px; cursor: pointer; transition: all .2s;
+}
+.demo-chip:hover { border-color: var(--green); color: var(--green); }
+
+@media(max-width:480px){
+  .auth-card { padding: 28px 20px; }
+  .role-grid { grid-template-columns: 1fr; }
+}
